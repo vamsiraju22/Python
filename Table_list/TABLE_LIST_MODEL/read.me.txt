@@ -1,0 +1,19 @@
+
+1.Go to CMD Prompt, and go to the path where python is installed in your system and ddo the below steps.
+2. Execute the following statements.
+	pip3 install pandas
+	pip3 install glob
+	pip3 install os
+	pip3 install re
+	pip3 install datetime
+
+Python script that provides that list of DB Names and table along with ETL Name when pass the etl file as input.
+
+Input folder  -- Keep all the input file in this folder
+Output Folder -- Output will be generated in this folder
+Output_file_name -- TABLE_LIST.xlsx
+TABLE_LIST.py -- Python Script to execute 
+
+Please make sure you install the packages - 
+pandas, glob, os, re, datetime
+

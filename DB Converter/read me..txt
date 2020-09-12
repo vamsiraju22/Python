@@ -1,0 +1,7 @@
+1.Make sure you install tkinter module.	
+	It can be installed by running this command in cmd prompt (Make sure your path is set or navigate to path where pip module is present). 
+	-->pip install tkinter
+2.This Convert $$ to Executable script is used to get rid of pasting and removing $$DBNAME when executing script copied from ETL code.
+3.It only works for DBNAME's.
+4.If you need to add or remove DB's , please change it in the script.
+5.The Convert Executable to $$ script is used to convert database into $$ format so it can be placed in ETL code without hassle of changing database_names

@@ -1,0 +1,54 @@
+2020-07-30 17:04:16,383 - teradata.udaexec - INFO - Initializing UdaExec...
+2020-07-30 17:04:16,383 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Python_Scripts1\\Python Scripts\\Export Insert Statements\\udaexec.ini: Found']
+2020-07-30 17:04:16,383 - teradata.udaexec - INFO - Found run number file: "C:\Users\vkadimis\Desktop\Python_Scripts1\Python Scripts\Export Insert Statements\.runNumber"
+2020-07-30 17:04:16,383 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2020-07-30 17:04:16,383 - teradata.udaexec - INFO - Removed 0 log files.
+2020-07-30 17:04:17,298 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\vkadimis\Desktop\Python_Scripts1\Python Scripts\Export Insert Statements\ExportInserts.checkpoint
+2020-07-30 17:04:17,298 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2020-07-30 17:04:17,298 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: ExportInserts
+ *          Version: 2
+ *       Run Number: 20200730170416-36
+ *             Host: VKADIMIS-4NA7P
+ *         Platform: Windows-10-10.0.18362-SP0
+ *          OS User: vkadimis
+ *   Python Version: 3.7.6
+ *  Python Compiler: MSC v.1916 64 bit (AMD64)
+ *     Python Build: ('tags/v3.7.6:43364a7ae0', 'Dec 19 2019 00:42:30')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: c:\users\vkadimis\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py
+ *      Working Dir: C:\Users\vkadimis\Desktop\Python_Scripts1\Python Scripts\Export Insert Statements
+ *          Log Dir: C:\Users\vkadimis\Desktop\Python_Scripts1\Python Scripts\Export Insert Statements\logs
+ *         Log File: C:\Users\vkadimis\Desktop\Python_Scripts1\Python Scripts\Export Insert Statements\logs\ExportInserts.20200730170416-36.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Python_Scripts1\\Python Scripts\\Export Insert Statements\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=ExportInserts;Version=2;JobID=20200730170416-36;ClientUser=vkadimis;Production=False;udaAppLogFile=C:\Users\vkadimis\Desktop\Python_Scripts1\Python Scripts\Export Insert Statements\logs\ExportInserts.20200730170416-36.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2020-07-30 17:04:17,298 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'TDPROD', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-30 17:04:21,765 - teradata.udaexec - INFO - Connection successful. Duration: 4.467 seconds. Details: {'method': 'odbc', 'system': 'TDPROD', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-30 17:04:32,663 - teradata.udaexec - INFO - Query Successful. Duration: 10.892 seconds, Rows: 760, Query: SELECT a.job_grp_name,a.JOB_NAME,a.SQ_INSTANCE_NAME,a.TARGET_INSTANCE_NAME,ltrim(b.target_db_name,'$') as target_db,a.TARGET_TABLE_NAME,a.TGT_LOAD_ORDER_NO,a.STMT_ATTR_DESC,a.STMT_LINE_NO,
+x'0A'||'/*#\#####'||x'0A'|| a.TECH_REPO_NAME || '::'|| a.JOB_GRP_NAME  ||'::'|| a.JOB_NAME  || '::'|| CAST(a.JOB_LAST_SAVED_DTTM AS VARCHAR(20)) ||'::'||  a.JOB_TASK_MAP_NAME || x'0A'
+|| '::'|| a.TARGET_INSTANCE_NAME || '::'||a.TARGET_TABLE_NAME || '::'|| TRIM(a.TGT_LOAD_ORDER_NO) || '::'||a.STMT_ATTR_DESC || '::'||TRIM(a.STMT_LINE_NO) || '::' ||x'0A' || '###### */' ||x'0A'
+||  a.STMT_TEXT || x'0A' || '/*^^^^^^^^^^^^^*/'||x'0A' AS SQL_TEXT
+from bidsmetricsvwdb.job_task_statements a
+left join
+(sel c.job_name,c.target_instance_name,c. target_db_name, c.target_table_name from bidsmetricsvwdb.JOB_SRC_TGTS  c
+group by c.job_name,c.target_instance_name,c. target_db_name, c.target_table_name) b
+on a.job_name=b.job_name
+and a.target_table_name = b.target_table_name
+and a.target_instance_name = b.target_instance_name
+where 1=1
+and a.tech_repo_name IN('EDW_Prod_101' )
+and (--STMT_TEXT LIKE '%WI_AS_UNBILLED_RSTD_BKGS%' --or 
+STMT_TEXT LIKE '%MT_RSTD_BKGS_MEASURE%'
+
+
+--STMT_TEXT LIKE '%WI_MEDIUM_RPT_RSTD%' or 
+--STMT_TEXT LIKE '%WI_SALES_HIER_DR_FINHIST%' or 
+--STMT_TEXT LIKE '%MT_RR_MTRCS_DTL_FACT%' or 
+--STMT_TEXT LIKE '%MT_RSTD_SLS_STK_RR_MTRCS%' or 
+--STMT_TEXT LIKE '%MT_RSTD_SUBSCR_METRIC_AMRTZ%' or 
+--STMT_TEXT LIKE '%WI_MT_RSTD_SUBSCR_METRIC_AMRTZ%' or 
+--STMT_TEXT LIKE '%W_RR_MTRCS_DTL_FACT%' 
+)
+and target_db <>'NULL'

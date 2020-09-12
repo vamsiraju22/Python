@@ -1,0 +1,402 @@
+2020-07-23 11:55:34,011 - teradata.udaexec - INFO - Initializing UdaExec...
+2020-07-23 11:55:34,012 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Vamsi Python Scripts\\My Scripts\\Find Missing and Present queries\\udaexec.ini: Found']
+2020-07-23 11:55:34,012 - teradata.udaexec - INFO - Found run number file: "C:\Users\vkadimis\Desktop\Vamsi Python Scripts\My Scripts\Find Missing and Present queries\.runNumber"
+2020-07-23 11:55:34,012 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2020-07-23 11:55:34,013 - teradata.udaexec - INFO - Removed 0 log files.
+2020-07-23 11:55:34,877 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\My Scripts\Find Missing and Present queries\QueryCheck.checkpoint
+2020-07-23 11:55:34,878 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2020-07-23 11:55:34,878 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: QueryCheck
+ *          Version: 1
+ *       Run Number: 20200723115533-20
+ *             Host: VKADIMIS-4NA7P
+ *         Platform: Windows-10-10.0.17134-SP0
+ *          OS User: vkadimis
+ *   Python Version: 3.7.6
+ *  Python Compiler: MSC v.1916 64 bit (AMD64)
+ *     Python Build: ('tags/v3.7.6:43364a7ae0', 'Dec 19 2019 00:42:30')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\My Scripts\Find Missing and Present queries\check if present.py
+ *      Working Dir: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\My Scripts\Find Missing and Present queries
+ *          Log Dir: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\My Scripts\Find Missing and Present queries\logs
+ *         Log File: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\My Scripts\Find Missing and Present queries\logs\QueryCheck.20200723115533-20.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Vamsi Python Scripts\\My Scripts\\Find Missing and Present queries\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=QueryCheck;Version=1;JobID=20200723115533-20;ClientUser=vkadimis;Production=False;udaAppLogFile=C:\Users\vkadimis\Desktop\Vamsi Python Scripts\My Scripts\Find Missing and Present queries\logs\QueryCheck.20200723115533-20.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2020-07-23 11:55:34,879 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'TDDEV', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-23 11:55:35,021 - teradata.tdodbc - INFO - Available drivers: SQL Server, Oracle in OraClient12Home1, BMF SQLite3 ODBC Driver, DataDirect 7.1 DB2 Wire Protocol, DataDirect 7.1 Informix Wire Protocol, DataDirect 7.1 Sybase Wire Protocol, DataDirect 7.1 SQL Server Wire Protocol, DataDirect 7.1 dBaseFile, DataDirect 7.1 FoxPro 3.0, DataDirect 7.1 MySQL Wire Protocol, DataDirect 7.1 New SQL Server Wire Protocol, DataDirect 7.1 Greenplum Wire Protocol, Informatica MongoDB ODBC Driver, DataDirect 7.1 Oracle Wire Protocol, Informatica Data Services ODBC Driver 10.1.0, Informatica Cassandra ODBC Driver, Teradata, Teradata 7.1 DB2 Wire Protocol, Teradata 7.1 Oracle, Teradata 7.1 Oracle Wire Protocol, Teradata 7.1 SQL Server Legacy Wire Protocol, Teradata 7.1 SQL Server Wire Protocol, DataDirect 8.0 New SQL Server Wire Protocol, DataDirect 7.1 PostgreSQL Wire Protocol, DataDirect 8.0 Oracle Wire Protocol, Informatica Data Services ODBC Driver 10.4.0
+2020-07-23 11:55:45,984 - teradata.udaexec - INFO - Connection successful. Duration: 11.105 seconds. Details: {'method': 'odbc', 'system': 'TDDEV', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-23 11:55:46,250 - teradata.udaexec - ERROR - Query Failed! Duration: 0.262 seconds, Query: show stats on stgdb_dv4.WI_SQ_SALES_HIERARCHY_CONF;
+Traceback (most recent call last):
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-23 11:55:46,516 - teradata.udaexec - ERROR - Query Failed! Duration: 0.258 seconds, Query: show stats on stgdb_dv4.ST_SHR_TEAM_MEMBERS_V;
+Traceback (most recent call last):
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-23 11:55:46,781 - teradata.udaexec - INFO - Query Successful. Duration: 0.261 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_SHR_MASTER_VERSNS_V_CONF;
+
+2020-07-23 11:55:47,300 - teradata.udaexec - INFO - Query Successful. Duration: 0.256 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_SHR_NODE_REL_CONFIRMED;
+
+2020-07-23 11:55:47,824 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_SHR_STRUCT_INTERFACE_V_CONF;
+
+2020-07-23 11:55:48,329 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_SHR_NODE_ATTRIBUTE_V_CNF;
+
+2020-07-23 11:55:48,867 - teradata.udaexec - INFO - Query Successful. Duration: 0.269 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_SHR_MARKET_SEGMENT_V_CNF;
+
+2020-07-23 11:55:49,386 - teradata.udaexec - INFO - Query Successful. Duration: 0.255 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_SHR_TEAM_MEMBERS;
+
+2020-07-23 11:55:49,890 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_COUNTRY_MISMATCH_RPT;
+
+2020-07-23 11:55:50,392 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_MEDIUM_PRE_RPT;
+
+2020-07-23 11:55:50,905 - teradata.udaexec - INFO - Query Successful. Duration: 0.256 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SYSVIEW_PARTY;
+
+2020-07-23 11:55:51,412 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_BOOKINGS_ALL;
+
+2020-07-23 11:55:51,925 - teradata.udaexec - INFO - Query Successful. Duration: 0.256 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_FIN_ADJ_RULE3_PARTY_SAV;
+
+2020-07-23 11:55:52,445 - teradata.udaexec - INFO - Query Successful. Duration: 0.256 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SALES_ACNT_MEASURE_FNL;
+
+2020-07-23 11:55:52,969 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_BOOKINGS_PARTY_ENRICH;
+
+2020-07-23 11:55:53,495 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_FA_R14_SHR_DNR_FNL;
+
+2020-07-23 11:55:54,009 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_USER_ROLE;
+
+2020-07-23 11:55:54,516 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_FIN_ADJ_UPLOAD_AUD;
+
+2020-07-23 11:55:55,036 - teradata.udaexec - INFO - Query Successful. Duration: 0.255 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_BOOKINGS_R14_ALL;
+
+2020-07-23 11:55:55,553 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_FA_R14_SHR_DNR_FNL_F;
+
+2020-07-23 11:55:56,073 - teradata.udaexec - INFO - Query Successful. Duration: 0.261 seconds, Rows: 1, Query: show stats on stgdb_dv4.BKGS_DATA;
+
+2020-07-23 11:55:56,585 - teradata.udaexec - INFO - Query Successful. Duration: 0.258 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_ACT_INACT_NODE_MAP_DRR;
+
+2020-07-23 11:55:57,124 - teradata.udaexec - INFO - Query Successful. Duration: 0.268 seconds, Rows: 1, Query: show stats on stgdb_dv4.EL_ACT_INACT_NODE_MAP_DRR_FDRR;
+
+2020-07-23 11:55:57,663 - teradata.udaexec - INFO - Query Successful. Duration: 0.273 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_SUMMARY_DYN_SLS_ADJ_UPLD;
+
+2020-07-23 11:55:58,188 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.EL_SUMMARY_DYN_SLS_ADJ_UPLD;
+
+2020-07-23 11:55:58,708 - teradata.udaexec - INFO - Query Successful. Duration: 0.266 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRRAR_PROCESS_CONTROL;
+
+2020-07-23 11:55:59,220 - teradata.udaexec - INFO - Query Successful. Duration: 0.256 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_MEDIUM_RPT;
+
+2020-07-23 11:55:59,746 - teradata.udaexec - INFO - Query Successful. Duration: 0.267 seconds, Rows: 1, Query: show stats on stgdb_dv4.RSW_BOOK_NET_DERIVATION;
+
+2020-07-23 11:56:00,261 - teradata.udaexec - INFO - Query Successful. Duration: 0.256 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_SAAS_FLG_DERIVATION;
+
+2020-07-23 11:56:00,803 - teradata.udaexec - INFO - Query Successful. Duration: 0.268 seconds, Rows: 1, Query: show stats on stgdb_dv4.SALES_REP_WHITELIST;
+
+2020-07-23 11:56:01,306 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.REVERSE_INSERTS;
+
+2020-07-23 11:56:01,826 - teradata.udaexec - INFO - Query Successful. Duration: 0.267 seconds, Rows: 1, Query: show stats on stgdb_dv4.NG_DISTINCT_BMK_REVERSE;
+
+2020-07-23 11:56:02,330 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.NG_DISTINCT_BMK_FWD;
+
+2020-07-23 11:56:02,849 - teradata.udaexec - INFO - Query Successful. Duration: 0.264 seconds, Rows: 1, Query: show stats on stgdb_dv4.DRR_FINADJ;
+
+2020-07-23 11:56:03,387 - teradata.udaexec - ERROR - Query Failed! Duration: 0.269 seconds, Query: show stats on stgdb_dv4.MT_SLS_ACNT_RSTD_MSR_FDRRNG_DEL;
+Traceback (most recent call last):
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-23 11:56:03,650 - teradata.udaexec - INFO - Query Successful. Duration: 0.258 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_NODE_LEVEL_PRE_RPT;
+
+2020-07-23 11:56:04,214 - teradata.udaexec - INFO - Query Successful. Duration: 0.292 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SALES_ACNT_MEASURE_FNL2;
+
+2020-07-23 11:56:04,732 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SALES_ACNT_MEASURE_FNL_SPLIT;
+
+2020-07-23 11:56:05,246 - teradata.udaexec - INFO - Query Successful. Duration: 0.256 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_MT_XAAS_SMC_ATTRIB_NRTR;
+
+2020-07-23 11:56:05,758 - teradata.udaexec - ERROR - Query Failed! Duration: 0.257 seconds, Query: show stats on stgdb_dv4.ST_XXANP_FIN_SAV_DESCR;
+Traceback (most recent call last):
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-23 11:56:06,012 - teradata.udaexec - INFO - Query Successful. Duration: 0.249 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_SUMMARY_SLS_ADJSTMT_DQ;
+
+2020-07-23 11:56:06,516 - teradata.udaexec - ERROR - Query Failed! Duration: 0.253 seconds, Query: show stats on stgdb_dv4.ST_FIN_ADJ_DRR_UPLOAD_LMT;
+Traceback (most recent call last):
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-23 11:56:06,772 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_DRR_NG_3;
+
+2020-07-23 11:56:07,282 - teradata.udaexec - INFO - Query Successful. Duration: 0.260 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_NODE_LEVEL_RPT;
+
+2020-07-23 11:56:07,786 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_FIN_ADJ_DRR_UPLOAD;
+
+2020-07-23 11:56:08,295 - teradata.udaexec - ERROR - Query Failed! Duration: 0.258 seconds, Query: show stats on stgdb_dv4.ST_XXANP_FIN_ADJ_DRRNG_UPLOAD;
+Traceback (most recent call last):
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-23 11:56:08,551 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_FILE_UPLOAD_AUD;
+
+2020-07-23 11:56:09,064 - teradata.udaexec - ERROR - Query Failed! Duration: 0.256 seconds, Query: show stats on stgdb_dv4.ST_FIN_WW_USER_ROLE;
+Traceback (most recent call last):
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-23 11:56:09,323 - teradata.udaexec - ERROR - Query Failed! Duration: 0.254 seconds, Query: show stats on stgdb_dv4.WI_AUD_DRR_FDRR;
+Traceback (most recent call last):
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-23 11:56:09,585 - teradata.udaexec - INFO - Query Successful. Duration: 0.259 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_BOOKINGS_INCRMENTAL;
+
+2020-07-23 11:56:10,090 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_NAMED_ACCOUNT;
+
+2020-07-23 11:56:10,609 - teradata.udaexec - INFO - Query Successful. Duration: 0.268 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_NAMED_ACC_AS_SAV;
+
+2020-07-23 11:56:11,118 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_NAMED_ACC_BKGS_INCR;
+
+2020-07-23 11:56:11,645 - teradata.udaexec - INFO - Query Successful. Duration: 0.260 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_NAMED_ACCOUNT_SHL;
+
+2020-07-23 11:56:12,147 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_NAMED_ACC_SYSPARTY;
+
+2020-07-23 11:56:12,653 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_NAMED_ACCOUNT_ROUND_OFF;
+
+2020-07-23 11:56:13,164 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_NAMED_ACC_SHRD_SPLIT;
+
+2020-07-23 11:56:13,677 - teradata.udaexec - INFO - Query Successful. Duration: 0.256 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_GEO_ACCOUNT_MATCH;
+
+2020-07-23 11:56:14,182 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_PL_RULES_ENRICHMENT;
+
+2020-07-23 11:56:14,705 - teradata.udaexec - INFO - Query Successful. Duration: 0.268 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_BOOKINGS_MSR_DENORM;
+
+2020-07-23 11:56:15,223 - teradata.udaexec - INFO - Query Successful. Duration: 0.259 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_DRR;
+
+2020-07-23 11:56:15,779 - teradata.udaexec - ERROR - Query Failed! Duration: 0.289 seconds, Query: show stats on stgdb_dv4.FIN_ADJ_CNFLT;
+Traceback (most recent call last):
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-23 11:56:16,043 - teradata.udaexec - ERROR - Query Failed! Duration: 0.260 seconds, Query: show stats on stgdb_dv4.ST_FIN_ADJ_DRR_UPLOAD_LMT_TMP;
+Traceback (most recent call last):
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-23 11:56:16,311 - teradata.udaexec - INFO - Query Successful. Duration: 0.263 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_DRR_NG_1;
+
+2020-07-23 11:56:16,816 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_FIN_ADJ_RULE;
+
+2020-07-23 11:56:17,322 - teradata.udaexec - INFO - Query Successful. Duration: 0.256 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_DRR_NG_2;
+
+2020-07-23 11:56:17,835 - teradata.udaexec - INFO - Query Successful. Duration: 0.263 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_MEDIUM_RPT_DRR;
+
+2020-07-23 11:56:18,353 - teradata.udaexec - INFO - Query Successful. Duration: 0.266 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_PARTY_SAV_MAPPING;
+
+2020-07-23 11:56:18,864 - teradata.udaexec - INFO - Query Successful. Duration: 0.259 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_MEDIUM_RPT_RSTD;
+
+2020-07-23 11:56:19,369 - teradata.udaexec - INFO - Query Successful. Duration: 0.255 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_SLS_ACNT_RSTD_MSR_PREV_DRR_NG;
+
+2020-07-23 11:56:19,877 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.wi_medium_rstd_rollup;
+
+2020-07-23 11:56:20,409 - teradata.udaexec - INFO - Query Successful. Duration: 0.273 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_HIERARCHY_MONTH_RSTMNTS_MID;
+
+2020-07-23 11:56:20,942 - teradata.udaexec - INFO - Query Successful. Duration: 0.269 seconds, Rows: 1, Query: show stats on stgdb_dv4.DRR_TEMP;
+
+2020-07-23 11:56:21,513 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.ACCT_TRN_TEMP;
+
+2020-07-23 11:56:22,020 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.RSTD_TEMP;
+
+2020-07-23 11:56:22,531 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_SUMMARY_SLS_ADJSTMT_DQ_DUPS;
+
+2020-07-23 11:56:23,034 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_N_SUMMARY_SLS_ADJSTMT_DQ;
+
+2020-07-23 11:56:23,552 - teradata.udaexec - INFO - Query Successful. Duration: 0.258 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_SALES_HIER_DR_FINHIST_ROLLUP;
+
+2020-07-23 11:56:24,057 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.RST_HIST_TEMP;
+
+2020-07-23 11:56:24,572 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_SALES_HIER_DR_FINHIST;
+
+2020-07-23 11:56:25,088 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_SALES_HIER_RST_HIST;
+
+2020-07-23 11:56:25,600 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_HIERARCHY_MONTH_RSTMNTS;
+
+2020-07-23 11:56:26,119 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.DR_FINHIST_TEMP;
+
+2020-07-23 11:56:26,652 - teradata.udaexec - ERROR - Query Failed! Duration: 0.268 seconds, Query: show stats on stgdb_dv4.WI_SUMMARY_SLS_ADJSTMT_DUPS;
+Traceback (most recent call last):
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "C:\Users\vkadimis\AppData\Local\Programs\Python\Python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-23 11:56:26,920 - teradata.udaexec - INFO - Query Successful. Duration: 0.265 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_SUMMARY_SLS_ADJSTMT;
+
+2020-07-23 11:56:27,457 - teradata.udaexec - INFO - Query Successful. Duration: 0.274 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DYN_RESTMT_SLS_ADJSTMT_ERP;
+
+2020-07-23 11:56:28,007 - teradata.udaexec - INFO - Query Successful. Duration: 0.277 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DYN_RESTMT_SLS_ADJSTMT_FNL;
+
+2020-07-23 11:56:28,531 - teradata.udaexec - INFO - Query Successful. Duration: 0.270 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DYN_RESTMT_SLS_ADJSTMT;
+
+2020-07-23 11:56:29,060 - teradata.udaexec - INFO - Query Successful. Duration: 0.272 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DYN_RESTMT_SLS_ADJ_UPLD;
+
+2020-07-23 11:56:29,618 - teradata.udaexec - INFO - Query Successful. Duration: 0.277 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_MEDIUM_PRE_RPT;
+
+2020-07-23 11:56:30,168 - teradata.udaexec - INFO - Query Successful. Duration: 0.279 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_MEDIUM_RPT_DRR;
+
+2020-07-23 11:56:31,053 - teradata.udaexec - INFO - Query Successful. Duration: 0.291 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_DRR_PL_LOV_DETAILS;
+
+2020-07-23 11:56:31,562 - teradata.udaexec - INFO - Query Successful. Duration: 0.258 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_DRR_PL_RULES_FDRR;
+
+2020-07-23 11:56:32,065 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_CURRENT_ACTIVE_TERRITORY_FDRR;
+
+2020-07-23 11:56:32,575 - teradata.udaexec - INFO - Query Successful. Duration: 0.261 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_BOOKINGS_INCRMENTAL_FDRR;
+
+2020-07-23 11:56:33,078 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_BOOKINGS_MEASURE_INCR_FDRR;
+
+2020-07-23 11:56:33,586 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_FA_R14_SHR_DNR_FNL_F_FDRR;
+
+2020-07-23 11:56:34,088 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_FA_R14_SHR_DNR_FNL_FDRR;
+
+2020-07-23 11:56:34,598 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_FA_R14_SHR_DNR_FNL_R_FDRR;
+
+2020-07-23 11:56:35,110 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_MT_SLS_ACNT_RSTD_INCR_FDRR;
+
+2020-07-23 11:56:35,617 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_NG_FA_R14_SHR_DNR_DEL_FDRR;
+
+2020-07-23 11:56:36,119 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_NG_FA_R14_SHR_DNR_FDRR;
+
+2020-07-23 11:56:36,621 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_PL_DELTA_FDRR;
+
+2020-07-23 11:56:37,123 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_PL_DELTA_1_FDRR;
+
+2020-07-23 11:56:37,629 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_PL_DELTA_2_FDRR;
+
+2020-07-23 11:56:38,141 - teradata.udaexec - INFO - Query Successful. Duration: 0.255 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_PL_RULES_DENORM_FDRR;
+
+2020-07-23 11:56:38,649 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_PL_RULES_DENORM_BKP_FDRR;
+
+2020-07-23 11:56:39,150 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SALES_ACCOUNT_MEASURE_FDRR;
+
+2020-07-23 11:56:39,651 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SALES_ACNT_MEASURE_FNL_FDRR;
+
+2020-07-23 11:56:40,164 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SALES_ACNT_MEASURE_FNL1_FDRR;
+
+2020-07-23 11:56:40,674 - teradata.udaexec - INFO - Query Successful. Duration: 0.259 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SALES_ACNT_MSRE_FNL_DEL_FDRR;
+
+2020-07-23 11:56:41,178 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SYSVIEW_PARTY_FDRR;
+
+2020-07-23 11:56:41,699 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SYSVIEW_PARTY_BKP_FDRR;
+
+2020-07-23 11:56:42,207 - teradata.udaexec - INFO - Query Successful. Duration: 0.257 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SYSVW_PARTY_OWN_TER_CHK_FDRR;
+
+2020-07-23 11:56:42,711 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_BOOKINGS_ACTIVE_FDRR;
+
+2020-07-23 11:56:43,231 - teradata.udaexec - INFO - Query Successful. Duration: 0.262 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_BOOKINGS_ACTIVE_R14_FDRR;
+
+2020-07-23 11:56:43,735 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_BOOKINGS_ALL_FDRR;
+
+2020-07-23 11:56:44,247 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_BOOKINGS_R14_ALL_FDRR;
+
+2020-07-23 11:56:44,748 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_PARTNER_CHANGE_FDRR;
+
+2020-07-23 11:56:45,250 - teradata.udaexec - INFO - Query Successful. Duration: 0.251 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_SHARE_NON_DNR_DEL_FDRR;
+
+2020-07-23 11:56:45,795 - teradata.udaexec - INFO - Query Successful. Duration: 0.271 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_DRR_PL_RULES;
+
+2020-07-23 11:56:46,299 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_CURRENT_ACTIVE_TERRITORY;
+
+2020-07-23 11:56:46,800 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_BOOKINGS_INCRMENTAL;
+
+2020-07-23 11:56:47,318 - teradata.udaexec - INFO - Query Successful. Duration: 0.266 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_BOOKINGS_MEASURE_INCR;
+
+2020-07-23 11:56:47,830 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_FA_R14_SHR_DNR_FNL;
+
+2020-07-23 11:56:48,337 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_FA_R14_SHR_DNR_FNL_F;
+
+2020-07-23 11:56:48,855 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_FA_R14_SHR_DNR_FNL_R;
+
+2020-07-23 11:56:49,372 - teradata.udaexec - INFO - Query Successful. Duration: 0.263 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_MT_SLS_ACNT_RSTD_INCR;
+
+2020-07-23 11:56:49,897 - teradata.udaexec - INFO - Query Successful. Duration: 0.260 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_NG_FA_R14_SHR_DNR;
+
+2020-07-23 11:56:50,414 - teradata.udaexec - INFO - Query Successful. Duration: 0.263 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_NG_FA_R14_SHR_DNR_DEL;
+
+2020-07-23 11:56:50,930 - teradata.udaexec - INFO - Query Successful. Duration: 0.255 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_PL_DELTA;
+
+2020-07-23 11:56:51,436 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_PL_DELTA_1;
+
+2020-07-23 11:56:51,945 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_PL_DELTA_2;
+
+2020-07-23 11:56:52,449 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_PL_RULES_DENORM;
+
+2020-07-23 11:56:52,952 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_PL_RULES_DENORM_BKP;
+
+2020-07-23 11:56:53,461 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SALES_ACCOUNT_MEASURE;
+
+2020-07-23 11:56:53,983 - teradata.udaexec - INFO - Query Successful. Duration: 0.261 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SALES_ACNT_MEASURE_FNL;
+
+2020-07-23 11:56:54,498 - teradata.udaexec - INFO - Query Successful. Duration: 0.260 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SALES_ACNT_MEASURE_FNL1;
+
+2020-07-23 11:56:55,051 - teradata.udaexec - INFO - Query Successful. Duration: 0.287 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SALES_ACNT_MSRE_FNL_DEL;
+
+2020-07-23 11:56:55,601 - teradata.udaexec - INFO - Query Successful. Duration: 0.259 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SYSVIEW_PARTY;
+
+2020-07-23 11:56:56,108 - teradata.udaexec - INFO - Query Successful. Duration: 0.250 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SYSVIEW_PARTY_BKP;
+
+2020-07-23 11:56:56,614 - teradata.udaexec - INFO - Query Successful. Duration: 0.252 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_DRR_SYSVW_PARTY_OWN_TER_CHK;
+
+2020-07-23 11:56:57,124 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_BOOKINGS_ACTIVE;
+
+2020-07-23 11:56:57,634 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_BOOKINGS_ACTIVE_R14;
+
+2020-07-23 11:56:58,152 - teradata.udaexec - INFO - Query Successful. Duration: 0.267 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_BOOKINGS_ALL;
+
+2020-07-23 11:56:58,672 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_FIN_ADJ_BOOKINGS_R14_ALL;
+
+2020-07-23 11:56:59,179 - teradata.udaexec - INFO - Query Successful. Duration: 0.254 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_PARTNER_CHANGE;
+
+2020-07-23 11:56:59,688 - teradata.udaexec - INFO - Query Successful. Duration: 0.253 seconds, Rows: 1, Query: show stats on stgdb_dv4.WI_SHARE_NON_DNR_DEL;
+2020-07-23 11:57:05,237 - teradata.udaexec - INFO - UdaExec exiting.

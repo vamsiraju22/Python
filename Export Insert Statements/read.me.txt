@@ -1,0 +1,17 @@
+Steps for exporting insert statements:
+
+1. Make sure you install the necessary python packages in your system before you execute them.
+teradata ,pandas  getpass,sys,tqdm
+2.Bydefault the connecttion is setup for PROD. If you need to change it to other database, please change it in the python script before executing.
+if you dont have the packages, you can install by following the below steps:
+1.Go to CMD Prompt
+2. Execute the following.
+	pip3 install teradata
+	pip3 install pandas
+	pip3 install getpass
+	pip3 install tqdm
+	pip3 install sys
+4.Place the query you want to create insert statements for in query.txt file.
+5.Execute the python file.
+6.You will get the output file named Insert_statements.txt in the same path.
+7.Ideal to export less rows. Dont use to export rows in thousands.

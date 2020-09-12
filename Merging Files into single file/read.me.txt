@@ -1,0 +1,11 @@
+Steps for exporting insert statements:
+
+1. Make sure you install the necessary python packages in your system before you execute them. Packages - (os, time)
+if you dont have the  above packages, you can install by following the below steps:
+1.Go to CMD Prompt, and go to the path where python is installed in your system and ddo the below steps.
+2. Execute the following statements.
+	pip3 install os
+	pip3 install time
+4.Execute the python file.You need to enter the path where the files are put and click enter.
+5.You will get the output file named Merged Output File in the same path.
+

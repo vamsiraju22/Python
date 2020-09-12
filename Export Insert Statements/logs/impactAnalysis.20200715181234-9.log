@@ -1,0 +1,135 @@
+2020-07-15 18:12:34,312 - teradata.udaexec - INFO - Initializing UdaExec...
+2020-07-15 18:12:34,313 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Vamsi Python Scripts\\Export Insert Statements\\udaexec.ini: Found']
+2020-07-15 18:12:34,314 - teradata.udaexec - INFO - Found run number file: "C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\.runNumber"
+2020-07-15 18:12:34,314 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2020-07-15 18:12:34,317 - teradata.udaexec - INFO - Removed 0 log files.
+2020-07-15 18:12:35,748 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\impactAnalysis.checkpoint
+2020-07-15 18:12:35,749 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2020-07-15 18:12:35,750 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: impactAnalysis
+ *          Version: 2
+ *       Run Number: 20200715181234-9
+ *             Host: VKADIMIS-4NA7P
+ *         Platform: Windows-10-10.0.17134-SP0
+ *          OS User: vkadimis
+ *   Python Version: 3.7.6
+ *  Python Compiler: MSC v.1916 64 bit (AMD64)
+ *     Python Build: ('tags/v3.7.6:43364a7ae0', 'Dec 19 2019 00:42:30')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\export_insert_statements.py
+ *      Working Dir: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements
+ *          Log Dir: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\logs
+ *         Log File: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\logs\impactAnalysis.20200715181234-9.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Vamsi Python Scripts\\Export Insert Statements\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=impactAnalysis;Version=2;JobID=20200715181234-9;ClientUser=vkadimis;Production=False;udaAppLogFile=C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\logs\impactAnalysis.20200715181234-9.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2020-07-15 18:12:35,751 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'TDPROD', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-15 18:12:39,496 - teradata.udaexec - INFO - Connection successful. Duration: 3.745 seconds. Details: {'method': 'odbc', 'system': 'TDPROD', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-15 18:12:40,342 - teradata.udaexec - INFO - Query Successful. Duration: 0.836 seconds, Rows: 10, Query: sel * from etlvwdb.dw_job_groups where job_group_id in (
+  select distinct job_group_id from etlvwdb.dw_job_streams where job_stream_id in ( 'wf_N_SALES_HIER_VER_CNFRMD',
+ 'wf_N_SALES_TERRITORY_ASSGN_CNF_TV',
+ 'wf_N_SALES_TERR_CNFRMD_TV',
+ 'wf_R_SALES_HIERARCHY_CONFIRMED_TV',
+ 'wf_ST_SHR_TEAM_MEMBERS_V',
+ 'wf_W_SALES_HIER_VER_CNFRMD',
+ 'wf_W_SALES_TERRITORY_ASSGN_CNF',
+ 'wf_W_SALES_TERR_CNFRMD',
+ 'wf_W_SLS_REP_TEAM_CSCO_WKR_LNK',
+ 'wf_ACTIVATE_FDRR',
+ 'wf_COUNTRY_MISMATCH_RPT',
+ 'wf_DEACTIVATE_FDRR',
+ 'wf_DRR_FA_PARTY_SAV_FNL',
+ 'wf_DRR_FA_R14_SHR_DNR_FNL_F',
+ 'wf_EL_ACT_INACT_NODE_MAP_DRR',
+ 'wf_EL_SUMMARY_DYN_SLS_ADJ_UPLD',
+ 'wf_FDRR_DRR_PARAM_GENERATE',
+ 'wf_FDRR_DRR_PARAM_GENERATE_AUTOMATED_REPORT',
+ 'wf_FF_COUNTRY_MISMATCH_RPT',
+ 'wf_MEDIUM_RPT_Americas',
+ 'wf_MEDIUM_RPT_APJC',
+ 'wf_MEDIUM_RPT_EMEAR_REGION',
+ 'wf_MEDIUM_RPT_GSP_AND_CROSS_L1',
+ 'wf_MT_ARCHITECTURE_GOALING_RPT',
+ 'wf_MT_CUSTOMER_GOALING_RPT',
+ 'wf_MT_DRR_NG_FA_R14_SHR_DNR',
+ 'wf_MT_MEDIUM_NODE_ORD_LINE',
+ 'wf_MT_SLS_ACNT_RSTD_MSR_DRR_NG',
+ 'wf_MT_XAAS_SMC_ATTRIB_NRTR',
+ 'wf_N_DYN_RESTMT_ENRICH_REASON',
+ 'wf_N_DYN_RESTMT_SLS_ADJSTMT',
+ 'wf_N_DYN_RESTMT_SLS_ADJSTMT_SUMMARY',
+ 'wf_N_DYN_RESTMT_SLS_ADJSTMT_SUMMARY_DQ',
+ 'wf_N_DYN_RESTMT_SLS_ADJ_UPLD',
+ 'wf_RPT_AMERICAS_MISC_Node',
+ 'wf_RPT_America_Other_NODE',
+ 'wf_RPT_ANZ_AREA_NODE',
+ 'wf_RPT_APJC_MISC_Node',
+ 'wf_RPT_APJC_Other_NODE',
+ 'wf_RPT_ASEAN_AREA_NODE',
+ 'wf_RPT_CANADA_NODE',
+ 'wf_RPT_EMEAR_CENTRAL_NODE',
+ 'wf_RPT_EMEAR_EE_NODE',
+ 'wf_RPT_EMEAR_FRANCE_NODE',
+ 'wf_RPT_EMEAR_GERMANY_NODE',
+ 'wf_RPT_EMEAR_GSP_NODE',
+ 'wf_RPT_EMEAR_MEA_NODE',
+ 'wf_RPT_EMEAR_MISC_Node',
+ 'wf_RPT_EMEAR_NORTH_NODE',
+ 'wf_RPT_EMEAR_Other_NODE',
+ 'wf_RPT_EMEAR_RCIS_NODE',
+ 'wf_RPT_EMEAR_SOUTH_NODE',
+ 'wf_RPT_EMEAR_SWITZERLAND_NODE',
+ 'wf_RPT_EMEAR_UKI_NODE',
+ 'wf_RPT_GLOBAL_ENTERPRISE_SEGMENT_NODE',
+ 'wf_RPT_GREATER_CHINA_NODE',
+ 'wf_RPT_GSP_AMERICAS_NODE',
+ 'wf_RPT_GSP_APJ_NODE',
+ 'wf_RPT_GSP_OTHER_NODE',
+ 'wf_RPT_INDIA_AREA_NODE',
+ 'wf_RPT_JAPAN_NODE',
+ 'wf_RPT_LATIN_AMERICA_NODE',
+ 'wf_RPT_ROK_AREA_NODE',
+ 'wf_RPT_US_COMMERCIAL_NODE',
+ 'wf_RPT_US_PS_Market_Segment_NODE',
+ 'wf_ST_DRR_PL_RULES',
+ 'wf_ST_FILE_UPLOAD_AUD',
+ 'wf_ST_FIN_WW_USER_ROLE',
+ 'wf_ST_USER_ROLE',
+ 'wf_ST_XXANP_FIN_SAV_DESCR',
+ 'wf_WI_AUD_DRR_FDRR',
+ 'wf_WI_DRR_BKGS_PARTY_EN_CR',
+ 'wf_WI_DRR_BKGS_PARTY_EN_CV',
+ 'wf_WI_DRR_BKGS_PARTY_EN_DEAL',
+ 'wf_WI_DRR_BKGS_PARTY_EN_FINADJ',
+ 'wf_WI_DRR_BKGS_PARTY_EN_SHIPTO',
+ 'wf_WI_DRR_BKGS_PARTY_EN_SO_END',
+ 'wf_WI_DRR_BKGS_SLSADJ_DNR',
+ 'wf_WI_DRR_BOOKINGS_INCRMENTAL',
+ 'wf_WI_DRR_NAMED_ACCOUNT',
+ 'wf_WI_DRR_NAMED_ACC_FNL_AS_SAV',
+ 'wf_WI_DRR_NAMED_ACC_FNL_DEFAUL',
+ 'wf_WI_DRR_NAMED_ACC_FNL_SHL',
+ 'wf_WI_DRR_NAMED_ACC_SHAREDSPLIT',
+ 'wf_WI_DRR_PL_RULES_DENORM',
+ 'wf_WI_DRR_SALES_ACC_FNL_GEO',
+ 'wf_WI_DRR_SALES_ACC_FNL_PL',
+ 'wf_WI_DRR_SALES_ACC_MSR_CVDNR',
+ 'wf_WI_DRR_SALES_ACC_MSR_SQ_DNR',
+ 'wf_WI_DRR_SALES_ACC_MSR_WWDIST',
+ 'wf_WI_DRR_SA_MSR_FNL1_DNR',
+ 'wf_WI_DRR_SYSVIEW_PARTY',
+ 'wf_WI_FIN_ADJ_DRR',
+ 'wf_WI_FIN_ADJ_DRR_NG_1',
+ 'wf_WI_FIN_ADJ_DRR_NG_2',
+ 'wf_WI_FIN_ADJ_DRR_NG_3',
+ 'wf_WI_MEDIUM_LEVEL_RPT_INTERIM',
+ 'wf_WI_N_SUMMARY_SLS_ADJSTMT_DQ',
+ 'wf_WI_SALES_HIER_DR_HIST',
+ 'wf_WI_SUMMARY_DYN_SLS_ADJ_UPLD',
+ 'wf_WI_SUMMARY_SLS_ADJSTMT',
+ 'wf_W_DYN_RESTMT_SLS_ADJUSTMENT',
+ 'wf_W_DYN_RESTMT_SLS_ADJUSTMENT_SUMMARY',
+ 'wf_W_DYN_RESTMT_SLS_ADJUSTMENT_SUMMARY_DQ',
+ 'wf_W_DYN_RESTMT_SLS_ADJ_UPLD',
+ 'wf_DRR_FA_R14_SHR_DNR_FNL_R'))

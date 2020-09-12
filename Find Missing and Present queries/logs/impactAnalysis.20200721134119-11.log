@@ -1,0 +1,50 @@
+2020-07-21 13:41:19,571 - teradata.udaexec - INFO - Initializing UdaExec...
+2020-07-21 13:41:19,573 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Vamsi Python Scripts\\Show Case\\Find Missing and Present files\\udaexec.ini: Found']
+2020-07-21 13:41:19,574 - teradata.udaexec - INFO - Found run number file: "C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Show Case\Find Missing and Present files\.runNumber"
+2020-07-21 13:41:19,574 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2020-07-21 13:41:19,576 - teradata.udaexec - INFO - Removed 0 log files.
+2020-07-21 13:41:20,839 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Show Case\Find Missing and Present files\impactAnalysis.checkpoint
+2020-07-21 13:41:20,840 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2020-07-21 13:41:20,840 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: impactAnalysis
+ *          Version: 2
+ *       Run Number: 20200721134119-11
+ *             Host: VKADIMIS-4NA7P
+ *         Platform: Windows-10-10.0.17134-SP0
+ *          OS User: vkadimis
+ *   Python Version: 3.7.6
+ *  Python Compiler: MSC v.1916 64 bit (AMD64)
+ *     Python Build: ('tags/v3.7.6:43364a7ae0', 'Dec 19 2019 00:42:30')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: c:\users\vkadimis\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py
+ *      Working Dir: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Show Case\Find Missing and Present files
+ *          Log Dir: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Show Case\Find Missing and Present files\logs
+ *         Log File: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Show Case\Find Missing and Present files\logs\impactAnalysis.20200721134119-11.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Vamsi Python Scripts\\Show Case\\Find Missing and Present files\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=impactAnalysis;Version=2;JobID=20200721134119-11;ClientUser=vkadimis;Production=False;udaAppLogFile=C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Show Case\Find Missing and Present files\logs\impactAnalysis.20200721134119-11.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2020-07-21 13:41:20,845 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'TDDEV', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-21 13:41:26,529 - teradata.udaexec - INFO - Connection successful. Duration: 5.681 seconds. Details: {'method': 'odbc', 'system': 'TDDEV', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-21 13:42:49,758 - teradata.udaexec - ERROR - Query Failed! Duration: 0.535 seconds, Query: show stats on stgdb_dv4.WI_SQ_SALES_HIERARCHY_CONF;
+Traceback (most recent call last):
+  File "c:\users\vkadimis\appdata\local\programs\python\python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "c:\users\vkadimis\appdata\local\programs\python\python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "c:\users\vkadimis\appdata\local\programs\python\python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-21 13:42:50,096 - teradata.udaexec - ERROR - Query Failed! Duration: 0.325 seconds, Query: show stats on stgdb_dv4.ST_SHR_TEAM_MEMBERS_V;
+Traceback (most recent call last):
+  File "c:\users\vkadimis\appdata\local\programs\python\python37\lib\site-packages\teradata\udaexec.py", line 790, in _execute
+    func(query, params, **kwargs)
+  File "c:\users\vkadimis\appdata\local\programs\python\python37\lib\site-packages\teradata\tdodbc.py", line 614, in execute
+    checkStatus(rc, hStmt=self.hStmt, method="SQLExecDirectW")
+  File "c:\users\vkadimis\appdata\local\programs\python\python37\lib\site-packages\teradata\tdodbc.py", line 231, in checkStatus
+    raise DatabaseError(i[2], u"[{}] {}".format(i[0], msg), i[0])
+teradata.api.DatabaseError: (3624, '[HY000] [Teradata][ODBC Teradata Driver][Teradata Database] There are no statistics defined for the table. ')
+2020-07-21 13:42:50,737 - teradata.udaexec - INFO - Query Successful. Duration: 0.636 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_SHR_MASTER_VERSNS_V_CONF;
+
+2020-07-21 13:42:51,666 - teradata.udaexec - INFO - Query Successful. Duration: 0.605 seconds, Rows: 1, Query: show stats on stgdb_dv4.ST_SHR_NODE_REL_CONFIRMED;
+

@@ -1,0 +1,58 @@
+2020-07-27 15:23:38,188 - teradata.udaexec - INFO - Initializing UdaExec...
+2020-07-27 15:23:38,188 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Python KT\\My Scripts\\Export Insert Statements\\udaexec.ini: Found']
+2020-07-27 15:23:38,189 - teradata.udaexec - INFO - Found run number file: "C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements\.runNumber"
+2020-07-27 15:23:38,189 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2020-07-27 15:23:38,190 - teradata.udaexec - INFO - Removed 0 log files.
+2020-07-27 15:23:39,479 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements\ExportInserts.checkpoint
+2020-07-27 15:23:39,480 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2020-07-27 15:23:39,480 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: ExportInserts
+ *          Version: 2
+ *       Run Number: 20200727152338-30
+ *             Host: VKADIMIS-4NA7P
+ *         Platform: Windows-10-10.0.17134-SP0
+ *          OS User: vkadimis
+ *   Python Version: 3.7.6
+ *  Python Compiler: MSC v.1916 64 bit (AMD64)
+ *     Python Build: ('tags/v3.7.6:43364a7ae0', 'Dec 19 2019 00:42:30')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: c:\users\vkadimis\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py
+ *      Working Dir: C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements
+ *          Log Dir: C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements\logs
+ *         Log File: C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements\logs\ExportInserts.20200727152338-30.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Python KT\\My Scripts\\Export Insert Statements\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=ExportInserts;Version=2;JobID=20200727152338-30;ClientUser=vkadimis;Production=False;udaAppLogFile=C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements\logs\ExportInserts.20200727152338-30.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2020-07-27 15:23:39,482 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'TDDEV', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-27 15:23:39,623 - teradata.tdodbc - INFO - Available drivers: SQL Server, Oracle in OraClient12Home1, BMF SQLite3 ODBC Driver, DataDirect 7.1 DB2 Wire Protocol, DataDirect 7.1 Informix Wire Protocol, DataDirect 7.1 Sybase Wire Protocol, DataDirect 7.1 SQL Server Wire Protocol, DataDirect 7.1 dBaseFile, DataDirect 7.1 FoxPro 3.0, DataDirect 7.1 MySQL Wire Protocol, DataDirect 7.1 New SQL Server Wire Protocol, DataDirect 7.1 Greenplum Wire Protocol, Informatica MongoDB ODBC Driver, DataDirect 7.1 Oracle Wire Protocol, Informatica Data Services ODBC Driver 10.1.0, Informatica Cassandra ODBC Driver, Teradata, Teradata 7.1 DB2 Wire Protocol, Teradata 7.1 Oracle, Teradata 7.1 Oracle Wire Protocol, Teradata 7.1 SQL Server Legacy Wire Protocol, Teradata 7.1 SQL Server Wire Protocol, DataDirect 8.0 New SQL Server Wire Protocol, DataDirect 7.1 PostgreSQL Wire Protocol, DataDirect 8.0 Oracle Wire Protocol, Informatica Data Services ODBC Driver 10.4.0
+2020-07-27 15:23:51,614 - teradata.udaexec - INFO - Connection successful. Duration: 12.132 seconds. Details: {'method': 'odbc', 'system': 'TDDEV', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-27 15:24:27,038 - teradata.udaexec - INFO - Query Successful. Duration: 0.361 seconds, Rows: 0, Query: sel * from ETLVWDB_TS1.DW_JOB_STREAMS WHERE JOB_STREAM_ID IN('WF_FF_SMC_ATR','WF_ST_SMC_ATR','WF_EL_SMC_ATR');
+2020-07-27 15:27:48,767 - teradata.udaexec - INFO - Initializing UdaExec...
+2020-07-27 15:27:48,767 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Python KT\\My Scripts\\Export Insert Statements\\udaexec.ini: Found']
+2020-07-27 15:27:48,768 - teradata.udaexec - INFO - Found run number file: "C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements\.runNumber"
+2020-07-27 15:27:48,768 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2020-07-27 15:27:48,770 - teradata.udaexec - INFO - Removed 0 log files.
+2020-07-27 15:27:49,869 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements\ExportInserts.checkpoint
+2020-07-27 15:27:49,869 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2020-07-27 15:27:49,869 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: ExportInserts
+ *          Version: 2
+ *       Run Number: 20200727152748-31
+ *             Host: VKADIMIS-4NA7P
+ *         Platform: Windows-10-10.0.17134-SP0
+ *          OS User: vkadimis
+ *   Python Version: 3.7.6
+ *  Python Compiler: MSC v.1916 64 bit (AMD64)
+ *     Python Build: ('tags/v3.7.6:43364a7ae0', 'Dec 19 2019 00:42:30')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: c:\users\vkadimis\appdata\local\programs\python\python37\lib\site-packages\ipykernel_launcher.py
+ *      Working Dir: C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements
+ *          Log Dir: C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements\logs
+ *         Log File: C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements\logs\ExportInserts.20200727152748-31.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Python KT\\My Scripts\\Export Insert Statements\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=ExportInserts;Version=2;JobID=20200727152748-31;ClientUser=vkadimis;Production=False;udaAppLogFile=C:\Users\vkadimis\Desktop\Python KT\My Scripts\Export Insert Statements\logs\ExportInserts.20200727152748-31.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2020-07-27 15:27:49,871 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'TDDEV', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-27 15:27:53,568 - teradata.udaexec - INFO - Connection successful. Duration: 3.697 seconds. Details: {'method': 'odbc', 'system': 'TDDEV', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}

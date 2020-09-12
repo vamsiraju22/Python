@@ -1,0 +1,133 @@
+2020-07-16 16:56:42,204 - teradata.udaexec - INFO - Initializing UdaExec...
+2020-07-16 16:56:42,205 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Vamsi Python Scripts\\Export Insert Statements\\udaexec.ini: Found']
+2020-07-16 16:56:42,205 - teradata.udaexec - INFO - Found run number file: "C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\.runNumber"
+2020-07-16 16:56:42,205 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2020-07-16 16:56:42,206 - teradata.udaexec - INFO - Removed 0 log files.
+2020-07-16 16:56:43,583 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\impactAnalysis.checkpoint
+2020-07-16 16:56:43,584 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2020-07-16 16:56:43,584 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: impactAnalysis
+ *          Version: 2
+ *       Run Number: 20200716165642-13
+ *             Host: VKADIMIS-4NA7P
+ *         Platform: Windows-10-10.0.17134-SP0
+ *          OS User: vkadimis
+ *   Python Version: 3.7.6
+ *  Python Compiler: MSC v.1916 64 bit (AMD64)
+ *     Python Build: ('tags/v3.7.6:43364a7ae0', 'Dec 19 2019 00:42:30')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\export_insert_statements.py
+ *      Working Dir: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements
+ *          Log Dir: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\logs
+ *         Log File: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\logs\impactAnalysis.20200716165642-13.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Vamsi Python Scripts\\Export Insert Statements\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=impactAnalysis;Version=2;JobID=20200716165642-13;ClientUser=vkadimis;Production=False;udaAppLogFile=C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\logs\impactAnalysis.20200716165642-13.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2020-07-16 16:56:43,585 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'TDPROD', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-16 16:56:43,743 - teradata.tdodbc - INFO - Available drivers: SQL Server, Oracle in OraClient12Home1, BMF SQLite3 ODBC Driver, DataDirect 7.1 DB2 Wire Protocol, DataDirect 7.1 Informix Wire Protocol, DataDirect 7.1 Sybase Wire Protocol, DataDirect 7.1 SQL Server Wire Protocol, DataDirect 7.1 dBaseFile, DataDirect 7.1 FoxPro 3.0, DataDirect 7.1 MySQL Wire Protocol, DataDirect 7.1 New SQL Server Wire Protocol, DataDirect 7.1 Greenplum Wire Protocol, Informatica MongoDB ODBC Driver, DataDirect 7.1 Oracle Wire Protocol, Informatica Data Services ODBC Driver 10.1.0, Informatica Cassandra ODBC Driver, Teradata, Teradata 7.1 DB2 Wire Protocol, Teradata 7.1 Oracle, Teradata 7.1 Oracle Wire Protocol, Teradata 7.1 SQL Server Legacy Wire Protocol, Teradata 7.1 SQL Server Wire Protocol, DataDirect 8.0 New SQL Server Wire Protocol, DataDirect 7.1 PostgreSQL Wire Protocol, DataDirect 8.0 Oracle Wire Protocol, Informatica Data Services ODBC Driver 10.4.0
+2020-07-16 16:57:00,167 - teradata.udaexec - INFO - Connection successful. Duration: 16.582 seconds. Details: {'method': 'odbc', 'system': 'TDPROD', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-16 16:57:02,791 - teradata.udaexec - INFO - Query Successful. Duration: 2.517 seconds, Rows: 103, Query: sel * from etlvwdb.dw_job_streams where job_stream_id in ('wf_ACTIVATE_FDRR',
+ 'wf_COUNTRY_MISMATCH_RPT',
+ 'wf_DEACTIVATE_FDRR',
+ 'wf_DRR_FA_PARTY_SAV_FNL',
+ 'wf_DRR_FA_R14_SHR_DNR_FNL_F',
+ 'wf_DRR_FA_R14_SHR_DNR_FNL_R',
+ 'wf_EL_ACT_INACT_NODE_MAP_DRR',
+ 'wf_EL_SUMMARY_DYN_SLS_ADJ_UPLD',
+ 'wf_FDRR_DRR_PARAM_GENERATE',
+ 'wf_FDRR_DRR_PARAM_GENERATE_AUTOMATED_REPORT',
+ 'wf_FF_ACT_INACT_NODE_MAP_DRR',
+ 'wf_FF_COUNTRY_MISMATCH_RPT',
+ 'wf_FF_FIN_ADJ_DRR_UPLOAD',
+ 'wf_FF_ST_DRR_PL_LOV_DETAILS',
+ 'wf_MEDIUM_RPT_Americas',
+ 'wf_MEDIUM_RPT_APJC',
+ 'wf_MEDIUM_RPT_EMEAR_REGION',
+ 'wf_MEDIUM_RPT_GSP_AND_CROSS_L1',
+ 'wf_MT_ARCHITECTURE_GOALING_RPT',
+ 'wf_MT_CUSTOMER_GOALING_RPT',
+ 'wf_MT_DRR_NG_FA_R14_SHR_DNR',
+ 'wf_MT_MEDIUM_NODE_ORD_LINE',
+ 'wf_MT_SLS_ACNT_RSTD_MSR_DRR_NG',
+ 'wf_MT_XAAS_SMC_ATTRIB_NRTR',
+ 'wf_N_DYN_RESTMT_ENRICH_REASON',
+ 'wf_N_DYN_RESTMT_SLS_ADJSTMT',
+ 'wf_N_DYN_RESTMT_SLS_ADJSTMT_SUMMARY',
+ 'wf_N_DYN_RESTMT_SLS_ADJSTMT_SUMMARY_DQ',
+ 'wf_N_DYN_RESTMT_SLS_ADJ_UPLD',
+ 'wf_RPT_AMERICAS_MISC_Node',
+ 'wf_RPT_America_Other_NODE',
+ 'wf_RPT_ANZ_AREA_NODE',
+ 'wf_RPT_APJC_MISC_Node',
+ 'wf_RPT_APJC_Other_NODE',
+ 'wf_RPT_ASEAN_AREA_NODE',
+ 'wf_RPT_CANADA_NODE',
+ 'wf_RPT_EMEAR_CENTRAL_NODE',
+ 'wf_RPT_EMEAR_EE_NODE',
+ 'wf_RPT_EMEAR_FRANCE_NODE',
+ 'wf_RPT_EMEAR_GERMANY_NODE',
+ 'wf_RPT_EMEAR_GSP_NODE',
+ 'wf_RPT_EMEAR_MEA_NODE',
+ 'wf_RPT_EMEAR_MISC_Node',
+ 'wf_RPT_EMEAR_NORTH_NODE',
+ 'wf_RPT_EMEAR_Other_NODE',
+ 'wf_RPT_EMEAR_RCIS_NODE',
+ 'wf_RPT_EMEAR_SOUTH_NODE',
+ 'wf_RPT_EMEAR_SWITZERLAND_NODE',
+ 'wf_RPT_EMEAR_UKI_NODE',
+ 'wf_RPT_GLOBAL_ENTERPRISE_SEGMENT_NODE',
+ 'wf_RPT_GREATER_CHINA_NODE',
+ 'wf_RPT_GSP_AMERICAS_NODE',
+ 'wf_RPT_GSP_APJ_NODE',
+ 'wf_RPT_GSP_OTHER_NODE',
+ 'wf_RPT_INDIA_AREA_NODE',
+ 'wf_RPT_JAPAN_NODE',
+ 'wf_RPT_LATIN_AMERICA_NODE',
+ 'wf_RPT_ROK_AREA_NODE',
+ 'wf_RPT_US_COMMERCIAL_NODE',
+ 'wf_RPT_US_PS_Market_Segment_NODE',
+ 'wf_ST_ACT_INACT_NODE_MAP_DRR',
+ 'wf_ST_DRR_PL_LOV_DETAILS',
+ 'wf_ST_DRR_PL_RULES',
+ 'wf_ST_FILE_UPLOAD_AUD',
+ 'wf_ST_FIN_WW_USER_ROLE',
+ 'wf_ST_USER_ROLE',
+ 'wf_ST_XXANP_FIN_ADJ_DRRNG_UPLOAD',
+ 'wf_ST_XXANP_FIN_SAV_DESCR',
+ 'wf_WI_AUD_DRR_FDRR',
+ 'wf_WI_DRR_BKGS_PARTY_EN_CR',
+ 'wf_WI_DRR_BKGS_PARTY_EN_CV',
+ 'wf_WI_DRR_BKGS_PARTY_EN_DEAL',
+ 'wf_WI_DRR_BKGS_PARTY_EN_FINADJ',
+ 'wf_WI_DRR_BKGS_PARTY_EN_SHIPTO',
+ 'wf_WI_DRR_BKGS_PARTY_EN_SO_END',
+ 'wf_WI_DRR_BKGS_SLSADJ_DNR',
+ 'wf_WI_DRR_BOOKINGS_INCRMENTAL',
+ 'wf_WI_DRR_NAMED_ACCOUNT',
+ 'wf_WI_DRR_NAMED_ACC_FNL_AS_SAV',
+ 'wf_WI_DRR_NAMED_ACC_FNL_DEFAUL',
+ 'wf_WI_DRR_NAMED_ACC_FNL_SHL',
+ 'wf_WI_DRR_NAMED_ACC_SHAREDSPLIT',
+ 'wf_WI_DRR_PL_RULES_DENORM',
+ 'wf_WI_DRR_SALES_ACC_FNL_GEO',
+ 'wf_WI_DRR_SALES_ACC_FNL_PL',
+ 'wf_WI_DRR_SALES_ACC_MSR_CVDNR',
+ 'wf_WI_DRR_SALES_ACC_MSR_SQ_DNR',
+ 'wf_WI_DRR_SALES_ACC_MSR_WWDIST',
+ 'wf_WI_DRR_SA_MSR_FNL1_DNR',
+ 'wf_WI_DRR_SYSVIEW_PARTY',
+ 'wf_WI_FIN_ADJ_DRR',
+ 'wf_WI_FIN_ADJ_DRR_NG_1',
+ 'wf_WI_FIN_ADJ_DRR_NG_2',
+ 'wf_WI_FIN_ADJ_DRR_NG_3',
+ 'wf_WI_MEDIUM_LEVEL_RPT_INTERIM',
+ 'wf_WI_N_SUMMARY_SLS_ADJSTMT_DQ',
+ 'wf_WI_SALES_HIER_DR_HIST',
+ 'wf_WI_SUMMARY_DYN_SLS_ADJ_UPLD',
+ 'wf_WI_SUMMARY_SLS_ADJSTMT',
+ 'wf_W_DYN_RESTMT_SLS_ADJUSTMENT',
+ 'wf_W_DYN_RESTMT_SLS_ADJUSTMENT_SUMMARY',
+ 'wf_W_DYN_RESTMT_SLS_ADJUSTMENT_SUMMARY_DQ',
+ 'wf_W_DYN_RESTMT_SLS_ADJ_UPLD');
+2020-07-16 16:57:13,924 - teradata.udaexec - INFO - UdaExec exiting.

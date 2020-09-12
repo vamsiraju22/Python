@@ -1,0 +1,33 @@
+2020-07-15 17:08:58,623 - teradata.udaexec - INFO - Initializing UdaExec...
+2020-07-15 17:08:58,623 - teradata.udaexec - INFO - Reading config files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Vamsi Python Scripts\\Export Insert Statements\\udaexec.ini: Found']
+2020-07-15 17:08:58,624 - teradata.udaexec - INFO - No previous run number found as C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\.runNumber does not exist. Initializing run number to 1
+2020-07-15 17:08:58,624 - teradata.udaexec - INFO - Cleaning up log files older than 90 days.
+2020-07-15 17:08:58,626 - teradata.udaexec - INFO - Removed 0 log files.
+2020-07-15 17:09:00,727 - teradata.udaexec - INFO - Checkpoint file not found: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\impactAnalysis.checkpoint
+2020-07-15 17:09:00,727 - teradata.udaexec - INFO - No previous checkpoint found, executing from beginning...
+2020-07-15 17:09:00,728 - teradata.udaexec - INFO - Execution Details:
+/********************************************************************************
+ * Application Name: impactAnalysis
+ *          Version: 2
+ *       Run Number: 20200715170858-1
+ *             Host: VKADIMIS-4NA7P
+ *         Platform: Windows-10-10.0.17134-SP0
+ *          OS User: vkadimis
+ *   Python Version: 3.7.6
+ *  Python Compiler: MSC v.1916 64 bit (AMD64)
+ *     Python Build: ('tags/v3.7.6:43364a7ae0', 'Dec 19 2019 00:42:30')
+ *  UdaExec Version: 15.10.0.21
+ *     Program Name: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\export_insert_statements.py
+ *      Working Dir: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements
+ *          Log Dir: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\logs
+ *         Log File: C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\logs\impactAnalysis.20200715170858-1.log
+ *     Config Files: ['C:\\etc\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\udaexec.ini: Not Found', 'C:\\Users\\vkadimis\\Desktop\\Vamsi Python Scripts\\Export Insert Statements\\udaexec.ini: Found']
+ *      Query Bands: ApplicationName=impactAnalysis;Version=2;JobID=20200715170858-1;ClientUser=vkadimis;Production=False;udaAppLogFile=C:\Users\vkadimis\Desktop\Vamsi Python Scripts\Export Insert Statements\logs\impactAnalysis.20200715170858-1.log;UtilityName=PyTd;UtilityVersion=15.10.0.21
+********************************************************************************/
+2020-07-15 17:09:00,729 - teradata.udaexec - INFO - Creating connection: {'method': 'odbc', 'system': 'TDPROD', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-15 17:09:00,902 - teradata.tdodbc - INFO - Available drivers: SQL Server, Oracle in OraClient12Home1, BMF SQLite3 ODBC Driver, DataDirect 7.1 DB2 Wire Protocol, DataDirect 7.1 Informix Wire Protocol, DataDirect 7.1 Sybase Wire Protocol, DataDirect 7.1 SQL Server Wire Protocol, DataDirect 7.1 dBaseFile, DataDirect 7.1 FoxPro 3.0, DataDirect 7.1 MySQL Wire Protocol, DataDirect 7.1 New SQL Server Wire Protocol, DataDirect 7.1 Greenplum Wire Protocol, Informatica MongoDB ODBC Driver, DataDirect 7.1 Oracle Wire Protocol, Informatica Data Services ODBC Driver 10.1.0, Informatica Cassandra ODBC Driver, Teradata, Teradata 7.1 DB2 Wire Protocol, Teradata 7.1 Oracle, Teradata 7.1 Oracle Wire Protocol, Teradata 7.1 SQL Server Legacy Wire Protocol, Teradata 7.1 SQL Server Wire Protocol, DataDirect 8.0 New SQL Server Wire Protocol, DataDirect 7.1 PostgreSQL Wire Protocol, DataDirect 8.0 Oracle Wire Protocol, Informatica Data Services ODBC Driver 10.4.0
+2020-07-15 17:09:16,251 - teradata.udaexec - INFO - Connection successful. Duration: 15.520 seconds. Details: {'method': 'odbc', 'system': 'TDPROD', 'username': 'vkadimis', 'password': 'XXXXXX', 'driver': 'Teradata', 'authentication': 'LDAP'}
+2020-07-15 17:09:17,456 - teradata.udaexec - INFO - Query Successful. Duration: 1.195 seconds, Rows: 1, Query: 
+sel * from etlvwdb.dw_job_groups where job_group_id in (
+ select distinct job_group_id from etlvwdb.dw_job_streams where job_stream_id in ( 'wf_N_SALES_HIER_VER_CNFRMD',
+'wf_N_SALES_TERRITORY_ASSGN_CNF_TV'))
