@@ -1,0 +1,18 @@
+l=[]
+for i in range(0,300):
+    l.append(i)
+    
+ls=pd.Series(l)
+data=pd.DataFrame(ls)
+
+new_list=[]
+l=[]
+for i in range(0,16):
+    for j in range(0,300):
+        l.append(round(random.random(), 5))
+    new_list.append(l)
+    l=[]
+
+for i in range(0,16):
+    data[i]=new_list[i]
+data
