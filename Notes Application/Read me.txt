@@ -1,0 +1,7 @@
+Please install the following packages in python before running the script.
+
+You can go to command prompt, set the path for python and run the below commands - 
+
+pip install PySimpleGUI
+pip install python-docx
+pip install pyautogui
