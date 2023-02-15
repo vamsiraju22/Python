@@ -1,5 +1,4 @@
-pip --upgrade
-gpt-index==0.3.4
-openai==0.26.4
-pandas==1.5.3
-streamlit==1.17.0
+gpt-index
+openai
+pandas
+streamlit
